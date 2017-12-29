@@ -10,32 +10,32 @@
                     <h1>Hi Rapid</h1>
                     <span>Admin</span>
                 </div>
-                <div class="col-md-6 col-xs-6 follow line" align="center">
+                {{!-- <div class="col-md-6 col-xs-6 follow line" align="center">
                     <h3>
                         125651 <br/> <span>Total Assets</span>
                     </h3>
-                </div>
-                <div class="col-md-6 col-xs-6 follow line" align="center">
+                </div> --}}
+                <div class="col-md-12 col-xs-12 follow line" align="center">
                     <h3>
-                        120 <br/> <span>Employes</span>
+                        {{message.length}} <br/> <span>Employees</span>
                     </h3>
                 </div>
 
                 <div class="col-md-12 col-xs-12 login_control">
                     <div class="control">
                         <div class="label">Employee Id</div>
-                        <input type="text" class="form-control" value="Employee"/>
+                        {{input type="text" class="form-control" placeholder="Id"  value=Employee}}
                     </div>
 
                     <div class="control">
                         <div class="label">Assets</div>
-                        <input type="text" class="form-control" value="Assets"/>
+                        {{input type="text" class="form-control" placeholder="Assets" value=Assets}}
                     </div>
 
                     <div align="center">
                         <div class="row">
                             <div class="col-sm-6">
-                                <button class="btn btn-orange">Sent</button>
+                                <button class="btn btn-orange"  {{action 'Sent'}}>Sent</button>
                             </div>
                             <div class="col-sm-6">
                                 <button class="btn btn-orange">Add</button>
@@ -53,52 +53,16 @@
                     <table class="table ">
                         <thead>
                         <tr>
-                            <th>No</th>
                             <th>Employee Id</th>
-                            <th>Name</th>
                         </tr>
                         </thead>
                         <tbody class="scroll">
+                      
+                        {{#each message as |row|}}
                         <tr>
-                            <td>1</td>
-                            <td>1234</td>
-                            <td>john</td>
+                            <td>{{row}}</td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>5678</td>
-                            <td>mary</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>7890</td>
-                            <td>july</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>7890</td>
-                            <td>july</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>7890</td>
-                            <td>july</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>7890</td>
-                            <td>july</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>7890</td>
-                            <td>july</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>7890</td>
-                            <td>july</td>
-                        </tr>
+                        {{/each}}
                         </tbody>
 
                     </table>

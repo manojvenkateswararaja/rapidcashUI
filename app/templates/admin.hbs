@@ -1,0 +1,18 @@
+{{outlet}}
+
+<div class="row">
+    <div class="row result">
+        Rapid Cash
+    </div>
+    <div class="container">
+   <form class="form-signin">
+               {{input type="text" class="form-control"placeholder="employee ID" value=id}}                                       
+                <button class="btn btn-lg btn-primary btn-block" {{action "Submit"}}>Submit</button>
+                </form>
+        <div class="col-md-12 text-center" style="margin-top:15px;">
+                        <div class="label col-md-12" style="color:#ffffff !important">Assets Name: {{employee.name }} <h3>{{data}}</h3></div>
+                         <div class="label col-md-12" style="color:#ffffff !important">Assets Value: <h3>{{employee.qty}}</h3></div>
+                    </div>
+                  
+        </div>
+        </div>
