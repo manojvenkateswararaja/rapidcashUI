@@ -10,7 +10,7 @@ export default Controller.extend({
                 var myController = this;
             
                 return $.ajax({
-                    url: 'http://192.168.0.42:3001/getbalance',
+                    url: 'http://localhost:3001/getbalance',
                     type: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify(data),

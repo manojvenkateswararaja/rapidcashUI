@@ -13,24 +13,16 @@ export default Controller.extend({
                 var data = {"transactiondetails":{
                     "from":admin,
                      "to":Employee,
-                     "qty":Assets
+                     "qty": parseInt(Assets)
                     }}
-
-
-
-                    console.log(data,"data");
+                    console.log("data",data);
                 return $.ajax({
                     url: 'http://161.202.167.135:3001/sendAsset',
                     type: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify(data),
                     success: function (response) {
-                        console.log(JSON.stringify(response));
-                        var message = response.message;
-                        console.log("message" + message);
-                        myController.transitionToRoute('employee');
-                        
-                      
+                        console.log("response",response);     
                     }
                 })
             }
